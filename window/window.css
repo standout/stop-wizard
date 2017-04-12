@@ -1,0 +1,75 @@
+.window {
+  position: relative;
+  margin: 2.3rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  /* top: 0; */
+  /* left: 0; */
+  /* right: 0; */
+  /* bottom: 0; */
+  background: rgba(255, 255, 255, 0.2);
+}
+.window-header {
+  text-align: center;
+  padding: 0.4rem;
+  display: flex;
+}
+.window-close-button {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  background: rgba(255, 0, 0, 0.6);
+  width: 1.4rem;
+  height: 1.4rem;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-top-width: 0;
+  font-size: 2.5rem;
+}
+.window-close-button:focus {
+  box-shadow: 0 0 0.5rem rgba(255, 0, 0, 0.5);
+}
+.window-close-button:active {
+  background: rgba(155, 0, 0, 0.8);
+}
+.window-close-button::after {
+  content: '\00d7';
+  border: 0;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1rem;
+  position: relative;
+  top: -0.05rem;
+}
+.window-header-title {
+  flex: 1;
+}
+.window-location {
+  margin: 0.5rem 1.4rem;
+}
+.window-location-link {
+  text-decoration: underline;
+  color: blue;
+}
+
+.window-body {
+  flex: 1;
+  display: flex;
+  background: white;
+  margin: 0 1rem 0;
+  flex-direction: column;
+  align-items: center;
+}
+.window-footer {
+  margin: 0 1rem 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+

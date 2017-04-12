@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/desktop/desktop.css"/>
+    <link rel="stylesheet" type="text/css" href="/overlay/overlay.css"/>
+    <link rel="stylesheet" type="text/css" href="/browser/browser.css"/>
+    <link rel="stylesheet" type="text/css" href="/window/window.css"/>
+    <link rel="stylesheet" type="text/css" href="/installer/installer.css"/>
+    <link rel="stylesheet" type="text/css" href="/website/website.css"/>
+    <link rel="stylesheet" type="text/css" href="/layout/layout.css"/>
+  </head>
+  <body>
+    <section class="desktop" role="navigation">
+      <button
+        type="button"
+        class="desktop-button hidden"
+        onclick="openBrowser()"
+        data-button="web-browser">
+        <img class="desktop-button-icon" src="/desktop/web-browser.png"/>
+        <div class="desktop-button-text">Web Browser</div>
+      </button>
+      <button
+        type="button"
+        class="desktop-button hidden"
+        onclick="onClickHobbit(event)"
+        data-button="the-hobbit">
+        <img class="desktop-button-icon" src="/desktop/the-hobbit.png"/>
+        <div class="desktop-button-text">The Hobbit</div>
+      </button>
+      <button
+        type="button"
+        class="desktop-button hidden"
+        onclick="onClickWizardHunter(event)"
+        data-button="wizard-hunter">
+        <img class="desktop-button-icon" src="/desktop/wizard-hunter.png"/>
+        <div class="desktop-button-text">The Wizard Hunter</div>
+      </button>
+
+      <section class="overlay hidden">
+        <section class="window browser hidden">
+          <div class="window-header">
+            <button
+              type="button"
+              class="window-close-button"
+              onclick="closeBrowser(event)">
+            </button>
+            <div class="window-header-title">Web Browser</div>
+          </div>
+          <div class="window-location">
+            <span class="window-location-link">https://google.com</span>
+          </div>
+          <div class="window-body">
+            <section class="website download-page">
+              <div class="website-game">
+                <img class="website-game-image" src="/desktop/the-hobbit.png"/>
+                <button
+                  type="button"
+                  class="website-game-download-button"
+                  onclick="onClickDownloadGame(event)">
+                  Download
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="window-footer">
+            <div class="browser-downloads hidden">
+              <script type="text/template" id="browser-downloads-item-template">
+                <button
+                  type="button"
+                  class="browser-downloads-button"
+                  data-button="the-hobbit"
+                  onclick="onClickInstallTheHobbit(event)">
+                  HobbitGameInstaller.js
+                </button>
+              </script>
+              <div class="browser-downloads-items"></div>
+              <button
+                type="button"
+                class="browser-downloads-close"
+                onclick="onClickDownloadsClose(event)">
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="window installer hidden">
+          <div class="window-header">
+            <button
+              type="button"
+              class="window-close-button"
+              onclick="closeInstaller(event)">
+            </button>
+            <div class="window-header-title">
+              Installer for The Hobbit Game
+            </div>
+          </div>
+          <div class="window-body">
+            <h1>ERROR</h1>
+            <hr />
+            <div>
+              An error occurred. The Wizard must be stopped.
+            </div>
+          </div>
+          <div class="window-footer">
+          </div>
+        </section>
+      </section>
+    </section>
+    <script src="/desktop/desktop.js"></script>
+  </body>
+</html>

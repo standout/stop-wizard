@@ -1,0 +1,53 @@
+.desktop {
+  position: relative;
+  align-items: flex-start;
+  background: #59d;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.desktop-button {
+  margin: 2.7rem;
+  border: 0;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10rem;
+  border: 0.1rem solid transparent;
+}
+.desktop-button:hover,
+.desktop-button:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.desktop-button:active {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.desktop-button-icon {
+  width: 3rem;
+  height: 3rem;
+  flex: 1;
+  margin: 0.5rem;
+}
+
+.desktop-button-text {
+  font-size: 1.5rem;
+  color: #135;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.2);
+}
+/*  */
+/* .window { */
+/*   border-radius: 0.5rem; */
+/*   border: 0.1rem solid #ddd; */
+/* } */
+/*  */
+/* .window-header { */
+/*   height: 2rem; */
+/*   border-bottom: 0.1rem solid #ddd; */
+/* } */

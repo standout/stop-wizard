@@ -1,0 +1,37 @@
+.website {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.website-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.website-game-image {
+  width: 10rem;
+  height: 10rem;
+}
+.website-game-download-button {
+  background: rgb(0, 180, 55);
+  font-size: 2rem;
+  color: white;
+  border-radius: 0.8rem;
+  border-color: rgba(0, 0, 0, 0.3);
+  border-width: 0 0.1rem 0.5rem;
+  padding: 0.3rem 1rem 0.3rem 0;
+  margin: 1rem;
+  transition: border 0.1s, margin: 0.1s;
+  text-shadow: -0.1rem -0.1rem 0.1rem rgba(0, 50, 0, 0.5);
+}
+.website-game-download-button:active {
+  margin-top: 1.3rem;
+  border-top-color: transparent;
+  border-bottom-width: 0.2rem;
+}
+.website-game-download-button::before {
+  content: '\203A \203A';
+  padding-left: 1rem;
+}
