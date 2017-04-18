@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/window/window.css"/>
     <link rel="stylesheet" type="text/css" href="/installer/installer.css"/>
     <link rel="stylesheet" type="text/css" href="/website/website.css"/>
+    <link rel="stylesheet" type="text/css" href="/fullscreen/fullscreen.css"/>
     <link rel="stylesheet" type="text/css" href="/layout/layout.css"/>
   </head>
   <body>
@@ -34,6 +35,14 @@
         data-button="wizard-hunter">
         <img class="desktop-button-icon" src="/desktop/wizard-hunter.png"/>
         <div class="desktop-button-text">The Wizard Hunter</div>
+      </button>
+      <button
+        type="button"
+        class="desktop-button hidden"
+        onclick="onClickOnliner(event)"
+        data-button="Onliner">
+        <img class="desktop-button-icon" src="/desktop/web-browser.png"/>
+        <div class="desktop-button-text">Onliner</div>
       </button>
 
       <section class="overlay hidden">
@@ -112,14 +121,40 @@
             <h1>ERROR</h1>
             <hr />
             <div>
-              An error occurred. The Wizard must be stopped.
+              Bzzt... An error occurred. Help us, the Wizard must be stopped.
             </div>
+            <button
+             type="button"
+             class="continue-button"
+             onclick="continueInstaller(event)" >
+             Continue
+             </button>
+           <button
+             type="button" 
+             class="continue-button"
+             onclick="continueInstaller(event)" >
+
+           </button>
           </div>
           <div class="window-footer">
           </div>
         </section>
+        <section class="fullscreen hidden">
+          
+          <div class="noki">
+            <img class="" src="/images/niko.png"/>
+          </div>
+            
+          <div class="niko hidden">
+            <img class="" src="/images/niko.png"/>
+          </div>
+        
+        </section>
       </section>
     </section>
     <script src="/desktop/desktop.js"></script>
+    <script src="/fullscreen/fullscreen.js"></script>
+    
+ 
   </body>
 </html>

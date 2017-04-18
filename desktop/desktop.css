@@ -1,7 +1,9 @@
 .desktop {
   position: relative;
   align-items: flex-start;
-  background: #59d;
+  background: url(/images/brick.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

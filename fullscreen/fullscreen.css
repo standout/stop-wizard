@@ -1,0 +1,9 @@
+.fullscreen{
+	background: url(/images/errors.jpeg);
+	flex: 1;
+
+    flex-direction: row-reverse;
+    display: flex;
+    align-items: flex-end;
+}
+ 

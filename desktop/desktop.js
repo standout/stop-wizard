@@ -19,6 +19,9 @@ let overlaySection =
 let browserWindowSection =
   document.querySelector('.window.browser')
 
+let fullscreenSection =
+  document.querySelector('.fullscreen')
+
 let browserCloseButton =
   document.querySelector('.window.browser window-close-button')
 
@@ -33,6 +36,9 @@ let browserDownloadsItemTemplate =
 
 let installerSection =
   document.querySelector('.window.installer')
+
+let cheatMode =
+  document.location.hash === '#cheat'
 
 function openWindow () {
   desktopButtons.forEach(el => el.classList.add('blur'))
@@ -86,19 +92,56 @@ function onClickInstallTheHobbit () {
 }
 
 function onClickHobbit () {
-  console.log('hobbit')
+   if (cheatMode || confirm('Do you want to launch the game?')){
+   startGame()
+   }
+  
+}
+
+function startGame () { 
+
+  openWindow()
+  fullscreenSection.classList.remove('hidden')
+  setTimeout(function(){
+   onStartGame() 
+    
+  })
+
+}
+
+function onClickOnliner () {
+  if(confirm('If you press ok, you will leave the page and go to googles site, are you sure you want to preform this action?')){
+    location.assign('https://www.google.se/?gfe_rd=cr&ei=0Nz1WLb2DrGEygXr1Jj4DA')
+  }
+  
 }
 
 function onClickWizardHunter () {
-  console.log('wiz')
+  openInstaller()
+  
 }
+
+function continueInstaller () {
+  closeInstaller()
+  desktopButtonTheHobbit.classList.remove('hidden') 
+}
+
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
   desktopButtonBrowser.classList.remove('hidden')
   // desktopButtonTheHobbit.classList.remove('hidden')
   // desktopButtonWizardHunter.classList.remove('hidden')
-
-  // openBrowser()
-  // onClickDownloadGame()
-  // onClickInstallTheHobbit()
+  if(cheatMode){
+    cheat()
+  }
 })
+
+function cheat(){
+  openBrowser()
+  onClickDownloadGame()
+  onClickInstallTheHobbit()
+  continueInstaller()
+  onClickHobbit()
+}
