@@ -93,7 +93,22 @@
               Installer for The Hobbit Game
             </div>
           </div>
-          <div class="window-body">
+          <div class="window-body installer-body-error hidden">
+            <h1>Installation</h1>
+            <hr />
+            <div>
+              Welcome to this installation wizard.
+              To proceed with the installation you need to have 42 KB free
+              memory.
+            </div>
+            <button
+              type="button"
+              onclick="installationProceed(event)"
+            >
+              Next
+            </button>
+          </div>
+          <div class="window-body installer-body-error">
             <h1>ERROR</h1>
             <hr />
             <div>

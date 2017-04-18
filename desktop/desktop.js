@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // desktopButtonTheHobbit.classList.remove('hidden')
   // desktopButtonWizardHunter.classList.remove('hidden')
 
-  openBrowser()
-  onClickDownloadGame()
-  onClickInstallTheHobbit()
+  // openBrowser()
+  // onClickDownloadGame()
+  // onClickInstallTheHobbit()
 })
