@@ -7,9 +7,9 @@
 }
 
 .fullscreen-hobbit {
-  background: url(/images/errors.jpeg);
+  background: url(../images/errors.jpeg);
 }
 
 .fullscreen-wizard {
-  background: url(/images/DarkForse.png);
+  background: url(../images/DarkForse.jpg);
 }
