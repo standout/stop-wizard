@@ -19,8 +19,11 @@ let overlaySection =
 let browserWindowSection =
   document.querySelector('.window.browser')
 
-let fullscreenSection =
-  document.querySelector('.fullscreen')
+let fullscreenHobbitSection =
+  document.querySelector('.fullscreen-hobbit')
+
+let fullscreenWizardSection =
+  document.querySelector('.fullscreen-wizard')
 
 let browserCloseButton =
   document.querySelector('.window.browser window-close-button')
@@ -41,12 +44,14 @@ let cheatMode =
   document.location.hash === '#cheat'
 
 function openWindow () {
-  desktopButtons.forEach(el => el.classList.add('blur'))
+  desktopSection.classList.add('blur')
+  // desktopButtons.forEach(el => el.classList.add('blur'))
   overlaySection.classList.remove('hidden')
 }
 
 function closeWindow () {
-  desktopButtons.forEach(el => el.classList.remove('blur'))
+  desktopSection.classList.remove('blur')
+  // desktopButtons.forEach(el => el.classList.remove('blur'))
   overlaySection.classList.add('hidden')
 }
 
@@ -92,33 +97,26 @@ function onClickInstallTheHobbit () {
 }
 
 function onClickHobbit () {
-   if (cheatMode || confirm('Do you want to launch the game?')){
-   startGame()
-   }
-  
+  return shouldLaunchGame().then(function () {
+    startHobbitGame()
+  })
 }
 
-function startGame () { 
-
-  openWindow()
-  fullscreenSection.classList.remove('hidden')
-  setTimeout(function(){
-   onStartGame() 
-    
-  })
-
+function shouldLaunchGame () {
+  if (cheatMode) {
+    return Promise.resolve()
+  }
+  return confirmDialog('Do you want to launch the game?')
 }
 
 function onClickOnliner () {
   if(confirm('If you press ok, you will leave the page and go to googles site, are you sure you want to preform this action?')){
     location.assign('https://www.google.se/?gfe_rd=cr&ei=0Nz1WLb2DrGEygXr1Jj4DA')
   }
-  
 }
 
 function onClickWizardHunter () {
-  openInstaller()
-  
+  startWizardGame()
 }
 
 function continueInstaller () {
@@ -143,5 +141,10 @@ function cheat(){
   onClickDownloadGame()
   onClickInstallTheHobbit()
   continueInstaller()
-  onClickHobbit()
+  onClickHobbit().then(function () {
+    closeHobbitGame()  
+  })
+  // promptDialog("What is your name").then(function (name) {
+  //   alertDialog(`Hello ${name}`)
+  // })
 }

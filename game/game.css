@@ -1,0 +1,14 @@
+.niko {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  right: 2rem;
+  bottom: 2rem;
+  text-align: right;
+}
+
+.niko img {
+  height: 100%;
+  width: auto;
+  display: inline-block;
+}

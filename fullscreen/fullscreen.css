@@ -1,9 +1,15 @@
-.fullscreen{
-	background: url(/images/errors.jpeg);
-	flex: 1;
-
-    flex-direction: row-reverse;
-    display: flex;
-    align-items: flex-end;
+.fullscreen {
+  flex: 1;
+  flex-direction: row-reverse;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
 }
- 
+
+.fullscreen-hobbit {
+  background: url(/images/errors.jpeg);
+}
+
+.fullscreen-wizard {
+  background: url(/images/niko.png);
+}

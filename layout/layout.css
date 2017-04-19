@@ -26,6 +26,6 @@ button:focus {
 }
 
 .blur {
-  filter: blur(0.5rem);
-  -webkit-filter: blur(0.5rem);
+  filter: blur(0.3rem);
+  -webkit-filter: blur(0.3rem);
 }
