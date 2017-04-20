@@ -245,7 +245,23 @@
     <script src="game/wizard.js"></script>
     <script src="dialog/dialog.js"></script>
 
-     <script src="flexibility.js"></script>
+    <script src="flexibility.js"></script>
+
+    <script>
+      let imagesToPreload = [
+        'images/DarkForse.jpg',
+        'images/desktop-bg-broken.jpg',
+        'images/desktop-bg-original.jpg',
+        'images/errors.jpeg',
+        'images/gandalf.png',
+        'images/kkkk.jpg',
+        'images/niko.1.png',
+      ]
+      imagesToPreload.forEach(function (src) {
+        let image = new Image()
+        image.src = src
+      })
+    </script>
   </body>
 </html>
 
