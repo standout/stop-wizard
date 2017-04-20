@@ -106,5 +106,4 @@ function cheat(){
     player.anws = 'no'
     player.resp = 'I am'
   }
-  openInstaller()
 }
