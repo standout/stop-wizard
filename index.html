@@ -18,30 +18,32 @@
   </head>
   <body>
     <section class="desktop" data-background="original" role="navigation">
-      <button
-        type="button"
-        class="desktop-button hidden"
-        onclick="openBrowser()"
-        data-button="web-browser">
-        <img class="desktop-button-icon" src="desktop/web-browser.png"/>
-        <div class="desktop-button-text">Web Browser</div>
-      </button>
-      <button
-        type="button"
-        class="desktop-button hidden"
-        onclick="onClickHobbit(event)"
-        data-button="the-hobbit">
-        <img class="desktop-button-icon" src="desktop/the-hobbit.png"/>
-        <div class="desktop-button-text">The Hobbit</div>
-      </button>
-      <button
-        type="button"
-        class="desktop-button hidden"
-        onclick="onClickWizardHunter(event)"
-        data-button="wizard-hunter">
-        <img class="desktop-button-icon" src="desktop/wizard-hunter.png"/>
-        <div class="desktop-button-text">The Wizard Hunter</div>
-      </button>
+      <section class="desktop-buttons">
+        <button
+          type="button"
+          class="desktop-button hidden"
+          onclick="openBrowser()"
+          data-button="web-browser">
+          <img class="desktop-button-icon" src="desktop/web-browser.png"/>
+          <div class="desktop-button-text">Web Browser</div>
+        </button>
+        <button
+          type="button"
+          class="desktop-button hidden"
+          onclick="onClickHobbit(event)"
+          data-button="the-hobbit">
+          <img class="desktop-button-icon" src="desktop/the-hobbit.png"/>
+          <div class="desktop-button-text">The Hobbit</div>
+        </button>
+        <button
+          type="button"
+          class="desktop-button hidden"
+          onclick="onClickWizardHunter(event)"
+          data-button="wizard-hunter">
+          <img class="desktop-button-icon" src="desktop/wizard-hunter.png"/>
+          <div class="desktop-button-text">The Wizard Hunter</div>
+        </button>
+      </section>
     </section>
 
     <section class="fullscreen fullscreen-hobbit hidden">

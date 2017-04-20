@@ -1,7 +1,7 @@
 'use strict'
 
 let desktopButtons =
-  document.querySelectorAll('.desktop-button')
+  document.querySelector('.desktop-buttons')
 
 let desktopButtonBrowser =
   document.querySelector('.desktop-button[data-button=web-browser]')
@@ -46,14 +46,14 @@ let cheatMode =
   document.location.hash === '#cheat'
 
 function openWindow () {
-  desktopSection.classList.add('blur')
-  // desktopButtons.forEach(el => el.classList.add('blur'))
+  // desktopSection.classList.add('blur')
+  desktopButtons.classList.add('hidden')
   overlaySection.classList.remove('hidden')
 }
 
 function closeWindow () {
-  desktopSection.classList.remove('blur')
-  // desktopButtons.forEach(el => el.classList.remove('blur'))
+  // desktopSection.classList.remove('blur')
+  desktopButtons.classList.remove('hidden')
   overlaySection.classList.add('hidden')
 }
 
