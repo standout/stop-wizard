@@ -5,15 +5,6 @@ let player = {}
 function startHobbitGame () {
   desktopSection.classList.add('hidden')
   fullscreenHobbitSection.classList.remove('hidden')
-
-  if (cheatMode) {
-    player.name = 'Ali'
-    player.anws = 'no'
-    player.resp = 'I am'
-  }
-  if (player.name) {
-    return Promise.resolve()
-  }
   return hobbitIntroduction()
 }
 

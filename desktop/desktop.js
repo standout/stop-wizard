@@ -99,16 +99,9 @@ function onClickInstallTheHobbit () {
 }
 
 function onClickHobbit () {
-  return shouldLaunchGame().then(function () {
+  return confirmDialog('Do you want to launch the game?').then(function () {
     startHobbitGame()
   })
-}
-
-function shouldLaunchGame () {
-  if (cheatMode) {
-    return Promise.resolve()
-  }
-  return confirmDialog('Do you want to launch the game?')
 }
 
 function onClickOnliner () {
@@ -131,22 +124,17 @@ function continueInstaller () {
 
 document.addEventListener('DOMContentLoaded', function () {
   desktopButtonBrowser.classList.remove('hidden')
-  // desktopButtonTheHobbit.classList.remove('hidden')
-  // desktopButtonWizardHunter.classList.remove('hidden')
   if(cheatMode){
     cheat()
   }
 })
 
 function cheat(){
-  openBrowser()
-  onClickDownloadGame()
-  onClickInstallTheHobbit()
-  continueInstaller()
-  onClickHobbit().then(function () {
-    closeHobbitGame()
-  })
-  // promptDialog("What is your name").then(function (name) {
-  //   alertDialog(`Hello ${name}`)
-  // })
+  desktopButtonTheHobbit.classList.remove('hidden')
+  desktopButtonWizardHunter.classList.remove('hidden')
+  if (cheatMode) {
+    player.name = 'Ali'
+    player.anws = 'no'
+    player.resp = 'I am'
+  }
 }
