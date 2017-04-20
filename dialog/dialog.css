@@ -40,6 +40,9 @@
   color: white;
   font-weight: bold;
 }
+.dialog-button-ok:active {
+  background: rgb(202, 110, 67);
+}
 
 .dialog-button-cancel {
   font-size: 1.5rem;
@@ -50,4 +53,7 @@
   background: none;
   color: rgb(230, 158, 69);
   font-weight: bold;
+}
+.dialog-button-cancel:active {
+  background-color: #ffeed9;
 }
