@@ -2,7 +2,7 @@ function startWizardGame () {
   desktopSection.classList.add('hidden')
   fullscreenWizardSection.classList.remove('hidden')
   // here
-  alertDialog('wiz')
+  alertDialog('${player.name} are you here?')
 }
 
 function closeWizardGame () {

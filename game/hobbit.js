@@ -67,7 +67,7 @@ function hobbitIntroduction () {
   }).then(function () {
     return alertDialog("Niko: uhm.. okey")
   }).then(function () {
-    return alertDialog("Niko: maybe,,, we can help each other fet out of here")
+    return alertDialog("Niko: maybe,,, we can help each other get out of here")
   }).then(function () {
     return alertDialog(`${player.name}: sure`)
   }).then(function () {
