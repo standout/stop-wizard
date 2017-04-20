@@ -84,9 +84,7 @@ function onClickDownloadsClose () {
 }
 
 function onClickHobbit () {
-  return confirmDialog('Do you want to launch the game?').then(function () {
-    startHobbitGame()
-  })
+  startHobbitGame()
 }
 
 function onClickWizardHunter () {
