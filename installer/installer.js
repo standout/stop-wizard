@@ -1,3 +1,5 @@
+'use strict'
+
 function openInstaller () {
   closeBrowser()
   openWindow()
