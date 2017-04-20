@@ -66,6 +66,8 @@ function startWizardGame () {
       case 'wizard': return playWithRod()
       default: throw new Error(`Unknown weapon ${weapon}`)
     }
+  }).catch(function () {
+    closeWizardGame()
   })
 }
 

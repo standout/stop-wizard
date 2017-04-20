@@ -15,6 +15,14 @@ let confirmDialogElement =
 let confirmDialogMessage =
   document.querySelector('.dialog-confirm .dialog-message')
 
+function closeDialogs (element) {
+  closeWindow()
+  let dialogs = document.querySelectorAll('.dialog')
+  Array.prototype.forEach.call(dialogs, function (dialog) {
+    dialog.classList.add('hidden')
+  })
+}
+
 function alertDialog (message) {
   return new Promise(function (resolve, reject) {
     openWindow()
@@ -22,10 +30,14 @@ function alertDialog (message) {
     alertDialogElement.classList.remove('hidden')
     document.forms.dialogAlertForm.addEventListener('submit', function (event) {
       event.preventDefault()
-      alertDialogElement.classList.add('hidden')
-      closeWindow()
       resolve()
     })
+  }).then(function (response) {
+    closeDialogs()
+    return response
+  }, function (error) {
+    closeDialogs()
+    return Promise.reject(error)
   })
 }
 
@@ -38,10 +50,18 @@ function promptDialog (message) {
     document.forms.dialogPromptForm.addEventListener('submit', function (event) {
       event.preventDefault()
       let answer = event.target.elements.answer.value
-      promptDialogElement.classList.add('hidden')
-      closeWindow()
       resolve(answer)
     })
+    let cancelButton = confirmDialogElement.querySelector('.dialog-button-cancel')
+    cancelButton.addEventListener('click', function () {
+      reject()
+    })
+  }).then(function (response) {
+    closeDialogs()
+    return response
+  }, function (error) {
+    closeDialogs()
+    return Promise.reject(error)
   })
 }
 
@@ -52,9 +72,17 @@ function confirmDialog (message) {
     confirmDialogElement.classList.remove('hidden')
     document.forms.dialogConfirmForm.addEventListener('submit', function (event) {
       event.preventDefault()
-      confirmDialogElement.classList.add('hidden')
-      closeWindow()
       resolve()
     })
+    let cancelButton = confirmDialogElement.querySelector('.dialog-button-cancel')
+    cancelButton.addEventListener('click', function () {
+      reject()
+    })
+  }).then(function (response) {
+    closeDialogs()
+    return response
+  }, function (error) {
+    closeDialogs()
+    return Promise.reject(error)
   })
 }

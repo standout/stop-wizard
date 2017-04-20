@@ -94,5 +94,7 @@ function hobbitIntroduction () {
     return alertDialog(`${player.name}: uhm.. okey`)
   }).then(function () {
     return alertDialog("Niko: see you in a sec")
+  }).catch(function () {
+    closeHobbitGame()
   })
 }
