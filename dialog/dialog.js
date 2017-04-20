@@ -1,8 +1,10 @@
+'use strict'
+
 let alertDialogElement =
   document.querySelector('.dialog-alert')
 let alertDialogMessage =
   document.querySelector('.dialog-alert .dialog-message')
-  
+
 let promptDialogElement =
   document.querySelector('.dialog-prompt')
 let promptDialogMessage =

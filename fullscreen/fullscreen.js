@@ -1,9 +1,11 @@
+'use strict'
+
   function onStartGame() {
     alert("huh?")
     alert("uhm... hi???")
     alert("who are you?")
     let name = prompt("what is your name?")
-    alert(`oh, uhm.. hi ${name}`) 
+    alert(`oh, uhm.. hi ${name}`)
     alert("what are you doing here?")
     alert("how did you get here...?")
     alert("okey, let's not talk about that right now")

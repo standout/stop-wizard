@@ -1,14 +1,16 @@
+'use strict'
+
 let player = {}
 
 function startHobbitGame () {
   desktopSection.classList.add('hidden')
   fullscreenHobbitSection.classList.remove('hidden')
-  
+
   if (cheatMode) {
     player.name = 'Ali'
     player.anws = 'no'
     player.resp = 'I am'
-  } 
+  }
   if (player.name) {
     return Promise.resolve()
   }
@@ -18,7 +20,7 @@ function startHobbitGame () {
 function closeHobbitGame () {
   desktopSection.classList.remove('hidden')
   fullscreenHobbitSection.classList.add('hidden')
-  desktopButtonWizardHunter.classList.remove('hidden') 
+  desktopButtonWizardHunter.classList.remove('hidden')
 }
 
 function hobbitIntroduction () {

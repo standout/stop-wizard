@@ -1,3 +1,5 @@
+'use strict'
+
 function startWizardGame () {
   desktopSection.classList.add('hidden')
   fullscreenWizardSection.classList.remove('hidden')

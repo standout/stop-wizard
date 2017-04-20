@@ -1,3 +1,5 @@
+'use strict'
+
 function swapGameGuide (gameSelector, selector) {
   let game = document.querySelector(gameSelector)
   game.querySelectorAll('.game-guide').forEach(function (element) {

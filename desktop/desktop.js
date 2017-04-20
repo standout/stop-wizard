@@ -1,3 +1,5 @@
+'use strict'
+
 let desktopButtons =
   document.querySelectorAll('.desktop-button')
 
@@ -121,7 +123,7 @@ function onClickWizardHunter () {
 
 function continueInstaller () {
   closeInstaller()
-  desktopButtonTheHobbit.classList.remove('hidden') 
+  desktopButtonTheHobbit.classList.remove('hidden')
 }
 
 
@@ -142,7 +144,7 @@ function cheat(){
   onClickInstallTheHobbit()
   continueInstaller()
   onClickHobbit().then(function () {
-    closeHobbitGame()  
+    closeHobbitGame()
   })
   // promptDialog("What is your name").then(function (name) {
   //   alertDialog(`Hello ${name}`)
