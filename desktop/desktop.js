@@ -71,6 +71,7 @@ function openInstaller () {
   closeBrowser()
   openWindow()
   installerSection.classList.remove('hidden')
+  desktopSection.dataset.background = 'broken'
 }
 
 function closeInstaller () {
