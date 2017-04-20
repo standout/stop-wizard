@@ -13,3 +13,13 @@
 .fullscreen-wizard {
   background: url(../images/DarkForse.jpg);
 }
+
+.fullscreen-wizard[data-background="Niko"] {
+  background: url(../images/kkkk.jpg);
+}
+
+.fullscreen-wizard[data-background="wizard"] {
+  background: url(../images/lol.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,4 +1,4 @@
-.niko {
+.game-guide {
   position: absolute;
   width: 30%;
   height: 30%;
@@ -7,8 +7,18 @@
   text-align: right;
 }
 
-.niko img {
+.game-guide img {
   height: 100%;
   width: auto;
   display: inline-block;
+}
+
+.game-guide.niko-1 {
+  width: 40%;
+  height: 40%;
+}
+
+.game-guide.wizard {
+  width: 70%;
+  height: 70%;
 }

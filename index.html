@@ -41,14 +41,6 @@
         <img class="desktop-button-icon" src="desktop/wizard-hunter.png"/>
         <div class="desktop-button-text">The Wizard Hunter</div>
       </button>
-      <button
-        type="button"
-        class="desktop-button hidden"
-        onclick="onClickOnliner(event)"
-        data-button="Onliner">
-        <img class="desktop-button-icon" src="desktop/web-browser.png"/>
-        <div class="desktop-button-text">Onliner</div>
-      </button>
     </section>
 
     <section class="fullscreen fullscreen-hobbit hidden">
@@ -58,19 +50,25 @@
         onclick="closeHobbitGame(event)">
       </button>
 
-      <div class="niko">
+      <div class="game-guide niko-1">
         <img class="" src="images/niko.1.png"/>
       </div>
     </section>
 
-    <section class="fullscreen fullscreen-wizard hidden">
+    <section class="fullscreen fullscreen-wizard hidden" data-weapon="">
       <button
         type="button"
         class="window-close-button"
         onclick="closeWizardGame(event)">
       </button>
 
-      Wizard
+      <div class="game-guide niko-1">
+        <img class="" src="images/niko.1.png"/>
+      </div>
+
+      <div class="game-guide wizard hidden">
+        <img class="" src="images/gandalf.png"/>
+      </div>
     </section>
 
     <section class="overlay hidden">
@@ -214,9 +212,10 @@
 
     <script src="desktop/desktop.js"></script>
     <script src="fullscreen/fullscreen.js"></script>
+    <script src="game/game.js"></script>
     <script src="game/hobbit.js"></script>
     <script src="game/wizard.js"></script>
     <script src="dialog/dialog.js"></script>
- 
+
   </body>
 </html>

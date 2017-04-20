@@ -12,6 +12,7 @@
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: 0rem 0rem 3rem 2px rgba(255,255,255, 0.5);
+  max-width: 50%;
 }
 
 .dialog-message {
