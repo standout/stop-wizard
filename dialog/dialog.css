@@ -32,9 +32,22 @@
 }
 
 .dialog-button-ok {
-
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d2821f;
+  border-radius: 0.3rem;
+  background: rgb(230, 158, 69);
+  color: white;
+  font-weight: bold;
 }
 
 .dialog-button-cancel {
-
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d2821f;
+  border-radius: 0.3rem;
+  background: none;
+  color: rgb(230, 158, 69);
+  font-weight: bold;
 }
