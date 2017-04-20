@@ -1,7 +1,8 @@
 function startWizardGame () {
   desktopSection.classList.add('hidden')
   fullscreenWizardSection.classList.remove('hidden')
-  // here
+  swapGameBackground('.fullscreen-wizard', 'DarkForse')
+  swapGameGuide('.fullscreen-wizard', '.game-guide.niko')
 
   return Promise.resolve().then(function () {
     return alertDialog(`Niko: ${player.name} are you here?`)
@@ -36,7 +37,7 @@ function startWizardGame () {
   }).then(function () {
     return alertDialog(`${player.name}: I get it, where is this key?`)
   }).then(function () {
-    swapGameGuide('.wizard')
+    swapGameGuide('.fullscreen-wizard', '.game-guide.wizard')
     return alertDialog("Stranger: right here")
   }).then(function () {
     return alertDialog("You and Niko turn aroung and look over at the wizard standing right there in front of you")
@@ -67,7 +68,7 @@ function startWizardGame () {
 }
 
 function playWithSword () {
-  swapGameGuide()
+  swapGameGuide('.fullscreen-wizard', undefined)
   swapGameBackground('.fullscreen-wizard', 'Niko')
   return Promise.resolve().then(function () {
     return alertDialog("YOU CHOOSE NIKOS ENDING")
@@ -249,7 +250,7 @@ function playWithSword () {
 }
 
 function playWithRod () {
-  swapGameGuide()
+  swapGameGuide('.fullscreen-wizard', undefined)
   swapGameBackground('.fullscreen-wizard', 'wizard')
   return Promise.resolve().then(function () {
     return alertDialog("YOU CHOOSE THE WIZARDS ENDING")

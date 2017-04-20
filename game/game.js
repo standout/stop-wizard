@@ -1,10 +1,11 @@
-function swapGameGuide (selector) {
-  document.querySelectorAll('.game-guide').forEach(function (element) {
+function swapGameGuide (gameSelector, selector) {
+  let game = document.querySelector(gameSelector)
+  game.querySelectorAll('.game-guide').forEach(function (element) {
     element.classList.add('hidden')
   })
 
   if (selector) {
-    document.querySelector(selector).classList.remove('hidden')
+    game.querySelector(selector).classList.remove('hidden')
   }
 }
 
