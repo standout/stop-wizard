@@ -52,7 +52,7 @@ function promptDialog (message) {
       let answer = event.target.elements.answer.value
       resolve(answer)
     })
-    let cancelButton = confirmDialogElement.querySelector('.dialog-button-cancel')
+    let cancelButton = promptDialogElement.querySelector('.dialog-button-cancel')
     cancelButton.addEventListener('click', function () {
       reject()
     })
