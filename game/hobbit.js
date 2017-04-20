@@ -11,6 +11,10 @@ function startHobbitGame () {
 function closeHobbitGame () {
   desktopSection.classList.remove('hidden')
   fullscreenHobbitSection.classList.add('hidden')
+}
+
+function finishHobbitGame () {
+  closeHobbitGame()
   desktopButtonWizardHunter.classList.remove('hidden')
 }
 
@@ -85,7 +89,9 @@ function hobbitIntroduction () {
     return alertDialog(`${player.name}: uhm.. okey`)
   }).then(function () {
     return alertDialog("Niko: see you in a sec")
-  }).catch(function () {
+  }).then(function () {
+    finishHobbitGame()
+  }, function () {
     closeHobbitGame()
   })
 }

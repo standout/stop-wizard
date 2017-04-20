@@ -66,7 +66,9 @@ function startWizardGame () {
       case 'wizard': return playWithRod()
       default: throw new Error(`Unknown weapon ${weapon}`)
     }
-  }).catch(function () {
+  }).then(function () {
+    finishWizardGame()
+  }, function () {
     closeWizardGame()
   })
 }
@@ -381,4 +383,8 @@ function chooseWeapon (message) {
 function closeWizardGame () {
   desktopSection.classList.remove('hidden')
   fullscreenWizardSection.classList.add('hidden')
+}
+
+function finishWizardGame () {
+  closeWizardGame()
 }
