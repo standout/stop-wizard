@@ -2,7 +2,8 @@
 
 function swapGameGuide (gameSelector, selector) {
   let game = document.querySelector(gameSelector)
-  game.querySelectorAll('.game-guide').forEach(function (element) {
+  let guides = game.querySelectorAll('.game-guide')
+  Array.prototype.forEach.call(guides, function (element) {
     element.classList.add('hidden')
   })
 
