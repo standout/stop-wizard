@@ -67,18 +67,6 @@ function closeBrowser () {
   browserWindowSection.classList.add('hidden')
 }
 
-function openInstaller () {
-  closeBrowser()
-  openWindow()
-  installerSection.classList.remove('hidden')
-  desktopSection.dataset.background = 'broken'
-}
-
-function closeInstaller () {
-  closeWindow()
-  installerSection.classList.add('hidden')
-}
-
 function onClickDownloadGame () {
   console.log('download')
   // desktopButtonTheHobbit.classList.remove('hidden')
@@ -95,33 +83,15 @@ function onClickDownloadsClose () {
   browserDownloads.classList.add('hidden')
 }
 
-function onClickInstallTheHobbit () {
-  openInstaller()
-}
-
 function onClickHobbit () {
   return confirmDialog('Do you want to launch the game?').then(function () {
     startHobbitGame()
   })
 }
 
-function onClickOnliner () {
-  if(confirm('If you press ok, you will leave the page and go to googles site, are you sure you want to preform this action?')){
-    location.assign('https://www.google.se/?gfe_rd=cr&ei=0Nz1WLb2DrGEygXr1Jj4DA')
-  }
-}
-
 function onClickWizardHunter () {
   startWizardGame()
 }
-
-function continueInstaller () {
-  closeInstaller()
-  desktopButtonTheHobbit.classList.remove('hidden')
-}
-
-
-
 
 document.addEventListener('DOMContentLoaded', function () {
   desktopButtonBrowser.classList.remove('hidden')
@@ -138,4 +108,5 @@ function cheat(){
     player.anws = 'no'
     player.resp = 'I am'
   }
+  openInstaller()
 }

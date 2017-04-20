@@ -1,9 +1,22 @@
-.window.installer {
+.installer {
   margin: 10rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.continue-button{
- font-size: 2rem;
- 
+.installer-body-main {
+  flex: 1;
+  padding: 2rem;
+  width: 100%;
+}
 
+.installer-body-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.installer-button-next {
+ font-size: 2rem;
+ margin: 2rem;
 }

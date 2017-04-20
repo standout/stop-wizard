@@ -175,33 +175,61 @@
             Installer for The Hobbit Game
           </div>
         </div>
-        <div class="window-body installer-body-error hidden">
-          <h1>Installation</h1>
-          <hr />
-          <div>
-            Welcome to this installation wizard.
-            To proceed with the installation you need to have 42 KB free
-            memory.
+        <div class="window-body installer-body-welcome">
+          <div class="installer-body-main">
+            <h1>Installation</h1>
+            <hr />
+            <div>
+              Welcome to this installation wizard.
+              To proceed with the installation you need to have 42 KB free
+              memory.
+            </div>
           </div>
-          <button
-            type="button"
-            onclick="installationProceed(event)"
-          >
-            Next
-          </button>
+          <div class="installer-body-buttons">
+            <button
+              type="button"
+              class="installer-button-next"
+              onclick="installationProceed(event)"
+            >
+              Next
+            </button>
+          </div>
         </div>
-        <div class="window-body installer-body-error">
-          <h1>ERROR</h1>
-          <hr />
-          <div>
-            Bzzt... An error occurred. Help us, the Wizard must be stopped.
+        <div class="window-body installer-body-progress hidden">
+          <div class="installer-body-main">
+            <h1>Installation</h1>
+            <hr />
+            <div>
+              Installing... please wait
+            </div>
           </div>
-          <button
-            type="button"
-            class="continue-button"
-            onclick="continueInstaller(event)" >
-            Continue
-          </button>
+          <div class="installer-body-buttons">
+            <button
+              type="button"
+              class="installer-button-next"
+              onclick="installationProceed(event)"
+              disabled="true"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+        <div class="window-body installer-body-error hidden">
+          <div class="installer-body-main">
+            <h1>ERROR</h1>
+            <hr />
+            <div>
+              An error occurred. The Wizard must be stopped.
+            </div>
+          </div>
+          <div class="installer-body-buttons">
+            <button
+              type="button"
+              class="installer-button-next"
+              onclick="finishInstaller(event)" >
+              Ok
+            </button>
+          </div>
         </div>
         <div class="window-footer">
         </div>
@@ -209,6 +237,7 @@
     </section>
 
     <script src="desktop/desktop.js"></script>
+    <script src="installer/installer.js"></script>
     <script src="fullscreen/fullscreen.js"></script>
     <script src="game/game.js"></script>
     <script src="game/hobbit.js"></script>
