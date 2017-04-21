@@ -65,60 +65,65 @@
     <section class="overlay hidden">
       <section class="dialog dialog-alert hidden">
         <form action="" name="dialogAlertForm" class="dialog-form">
-          <div class="dialog-message"></div>
+          <fieldset class="dialog-input-group">
+            <div class="dialog-message"></div>
+          </fieldset>
+          <fieldset class="dialog-button-group">
+            <button
+              type="submit"
+              class="dialog-button-ok">
+              OK
+            </button>
+          </fieldset>
         </form>
-        <fieldset class="dialog-button-group">
-          <button
-            type="submit"
-            class="dialog-button-ok">
-            OK
-          </button>
-        </fieldset>
       </section>
 
       <section class="dialog dialog-prompt hidden">
         <form action="" name="dialogPromptForm" class="dialog-form">
-          <div class="dialog-message"></div>
           <fieldset class="dialog-input-group">
+            <div class="dialog-message"></div>
             <input
               type="text"
               name="answer"
               class="dialog-input-text"
               size="30"
               required="true"
+              placeholder="Type your answer here.."
             />
           </fieldset>
+          <fieldset class="dialog-button-group">
+            <button
+              type="submit"
+              class="dialog-button-ok">
+              OK
+            </button>
+            <button
+              type="button"
+              class="dialog-button-cancel">
+              Cancel
+            </button>
+          </fieldset>
         </form>
-        <fieldset class="dialog-button-group">
-          <button
-            type="submit"
-            class="dialog-button-ok">
-            OK
-          </button>
-          <button
-            type="button"
-            class="dialog-button-cancel">
-            Cancel
-          </button>
-        </fieldset>
       </section>
 
       <section class="dialog dialog-confirm hidden">
         <form action="" name="dialogConfirmForm" class="dialog-form">
-          <div class="dialog-message"></div>
+          <fieldset class="dialog-input-group">
+            <div class="dialog-message"></div>
+          </fieldset>
+          <fieldset class="dialog-button-group">
+            <button
+              type="submit"
+              class="dialog-button-ok">
+              OK
+            </button>
+            <button
+              type="button"
+              class="dialog-button-cancel">
+              Cancel
+            </button>
+          </fieldset>
         </form>
-        <fieldset class="dialog-button-group">
-          <button
-            type="submit"
-            class="dialog-button-ok">
-            OK
-          </button>
-          <button
-            type="button"
-            class="dialog-button-cancel">
-            Cancel
-          </button>
-        </fieldset>
       </section>
 
       <section class="window browser hidden">

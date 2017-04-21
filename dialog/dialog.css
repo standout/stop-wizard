@@ -2,33 +2,53 @@
   flex: 1;
   flex-direction: row;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
-.dialog-form {
-  margin: 5rem;
+.dialog-message {
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.dialog-input-group {
+  max-width: 50%;
+  margin: 0 5rem 2rem;
   background: white;
   border: 0.1rem solid black;
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: 0rem 0rem 3rem 2px rgba(255,255,255, 0.5);
-  max-width: 50%;
-}
-
-.dialog-message {
-  margin: 1rem;
-}
-
-.dialog-input-group {
-  border: 0;
+  min-width: 40rem;
+  min-height: 10rem;
 }
 
 .dialog-button-group {
   border: 0;
+  margin: 0 5rem 8rem;
 }
 
-.dialog-button {
+.dialog-input-text {
+  font-size: 1.5rem;
+  padding: 0.5rem 0.8rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid orange;
+  background: #fff6d9;
+}
 
+.dialog-input-text::-webkit-input-placeholder {
+  color: #ffc795;
+}
+.dialog-input-text:-moz-placeholder {
+  color: #ffc795;
+  opacity: 1;
+}
+.dialog-input-text::-moz-placeholder {
+  color: #ffc795;
+  opacity: 1;
+}
+.dialog-input-text:-ms-input-placeholder {
+  color: #ffc795;
 }
 
 .dialog-button-ok {
