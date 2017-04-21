@@ -1,8 +1,8 @@
 .installer {
-  margin: 10rem;
   display: flex;
   flex-direction: column;
   max-width: 40rem;
+  flex: none;
 }
 
 .installer-body-main {

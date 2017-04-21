@@ -1,5 +1,7 @@
 'use strict'
 
+let failTimeout
+
 function openInstaller () {
   closeBrowser()
   openWindow()
@@ -19,7 +21,7 @@ function toggleInstallerBody(selector) {
 
 function installationProceed () {
   toggleInstallerBody('.installer-body-progress')
-  setTimeout(function () {
+  failTimeout = setTimeout(function () {
     installationFail()
   }, 3000)
 }
@@ -35,6 +37,7 @@ function onClickInstallTheHobbit () {
 }
 
 function closeInstaller () {
+  clearTimeout(failTimeout)
   closeWindow()
   installerSection.classList.add('hidden')
 }
