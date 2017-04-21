@@ -47,13 +47,13 @@ let cheatMode =
 
 function openWindow () {
   // desktopSection.classList.add('blur')
-  desktopButtons.classList.add('hidden')
+  desktopButtons.classList.add('obscured')
   overlaySection.classList.remove('hidden')
 }
 
 function closeWindow () {
   // desktopSection.classList.remove('blur')
-  desktopButtons.classList.remove('hidden')
+  desktopButtons.classList.remove('obscured')
   overlaySection.classList.add('hidden')
 }
 

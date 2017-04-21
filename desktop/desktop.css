@@ -50,3 +50,9 @@
   color: #135;
   text-shadow: 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.2);
 }
+
+@media (max-width: 60rem) {
+  .desktop-buttons.obscured {
+    display: none;
+  }
+}
