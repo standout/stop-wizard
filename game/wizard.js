@@ -46,7 +46,7 @@ function startWizardGame () {
   }).then(function () {
     return alertDialog("Wizard: want the key? come and get it!")
   }).then(function () {
-    return alertDialog("Niko:...")
+    return alertDialog("Niko: ...")
   }).then(function () {
     return alertDialog(`${player.name}: well that was easy to find`)
   }).then(function () {
@@ -54,7 +54,7 @@ function startWizardGame () {
   }).then(function () {
     return alertDialog("The wizard picks up his rod and points it at Niko")
   }).then(function () {
-    return alertDialog("Niko: Help me! take his rod!")
+    return alertDialog("Niko: help me! take his rod!")
   }).then(function () {
     return alertDialog("Wizard: just try")
   }).then(function () {
@@ -153,7 +153,7 @@ function playWithSword () {
   }).then(function () {
      return alertDialog(`${player.name}: so where do we find the... door...`)
   }).then(function () {
-     return alertDialog("Niko: Let me show you!")
+     return alertDialog("Niko: let me show you!")
   }).then(function () {
      return alertDialog("You and Niko travels for a while through different places")
   }).then(function () {
@@ -175,7 +175,7 @@ function playWithSword () {
   }).then(function () {
      return alertDialog("You walk through some rooms and soon you reach a smaller corridore")
   }).then(function () {
-    return alertDialog("Niko: Common!")
+    return alertDialog("Niko: common!")
   }).then(function () {
     return alertDialog("Niko starts to run and you follow him the best you can")
   }).then(function () {
@@ -267,7 +267,7 @@ function playWithRod () {
   }).then(function () {
      return alertDialog(`${player.name}: There's no need to attack eatch other!`)
   }).then(function () {
-     return alertDialog("Niko: Are you crazy!?")
+     return alertDialog("Niko: are you crazy!?")
   }).then(function () {
      return alertDialog(`${player.name}: just do as I say!`)
   }).then(function () {

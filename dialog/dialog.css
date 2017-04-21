@@ -3,6 +3,14 @@
   flex-direction: row;
   display: flex;
   align-items: center;
+  align-self: flex-start;
+  margin-left: 20%;
+}
+
+@media (max-width: 100rem) {
+  .dialog {
+    margin-left: 0;
+  }
 }
 
 .dialog-message {
