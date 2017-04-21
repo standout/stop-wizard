@@ -22,14 +22,14 @@ function hobbitIntroduction () {
   return Promise.resolve().then(function () {
     return alertDialog("Stranger: huh?")
   }).then(function () {
-    return alertDialog("stranger: uhm... hi???")
+    return alertDialog("Stranger: uhm... hi???")
   }).then(function () {
     return alertDialog("Stranger: who are you?")
   }).then(function () {
     return promptDialog("Stranger: what is your name?")
   }).then(function (name) {
     player.name = name
-    return alertDialog(`stranger: oh, uhm.. hi ${player.name}`)
+    return alertDialog(`Stranger: oh, uhm.. hi ${player.name}`)
   }).then(function () {
     return alertDialog("Stranger: what are you doing here?")
   }).then(function () {
