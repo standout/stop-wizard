@@ -46,7 +46,7 @@ function hobbitIntroduction () {
   }).then(function () {
     return alertDialog("Stragner: my name is Niko, I uhm... live here")
   }).then(function () {
-    return promptDialog("Niko: you surely look really confuse,,, ")
+    return promptDialog("Niko: you surely look really confused,,, ")
   }).then(function (resp) {
     player.resp = resp
   }).then(function () {
